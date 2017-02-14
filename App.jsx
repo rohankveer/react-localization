@@ -4,7 +4,11 @@ var T = require('i18n-react').default;
 class App extends React.Component {
 
   render() {
-      let language = this.props.location.query.lang;
+    let language = "en";
+    if (typeof this.props.location.query.lang != 'undefined'){
+        language = this.props.location.query.lang;
+    }
+      
       return (
          <div>
            <h1>{T.translate(language + ".greetings.hello", { who: "Rohan Veer"})}</h1>

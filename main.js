@@ -8,6 +8,8 @@ var T = require('i18n-react').default;
 var en = require('./locale/en.yml');
 var fr = require('./locale/fr.yml');
 
+// function to parse query parameters
+
 var queryParams = function () {
   var query_string = {};
   var query = window.location.search.substring(1);
@@ -29,7 +31,12 @@ var queryParams = function () {
   return query_string;
 }();
 
-T.setTexts(eval(queryParams.lang));
+// set text dynamically based on the query parameters
+if (typeof queryParams.lang != 'undefined'){
+    T.setTexts(eval(queryParams.lang));
+} else {
+    T.setTexts(en);
+}
 
 ReactDOM.render(<Router history={browserHistory}>
 <Route path="/" components={App}/>
