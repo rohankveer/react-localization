@@ -1,6 +1,7 @@
 # react-localization
 react localization
 
-Steps to execute - 
-1. npm install
-2. npm start
+Steps to execute :
+  - npm install
+  - npm start
+  - go to localhost:8080?lang=en

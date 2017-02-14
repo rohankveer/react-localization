@@ -3,14 +3,12 @@ var T = require('i18n-react').default;
 
 class App extends React.Component {
 
-  componentWillMount(){
-        T.setTexts(require('./locale/texts-en.yml'));
-    }
-
-   render() {
+  render() {
+      let language = this.props.location.query.lang;
       return (
          <div>
-            <T.p text={{ key: "greetings.hello", who: "Rohan" }} />
+           <h1>{T.translate(language + ".greetings.hello", { who: "Rohan Veer"})}</h1>
+            <T.p text={{ key: language + ".greetings.howdy.normal", who: "Rohan Veer" }} />
          </div>
       );
    }

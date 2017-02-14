@@ -1,0 +1,8 @@
+fr:
+  greetings:
+    hello: Bonjour, {who}!
+    howdy:
+      formal: How do you do?
+      normal: Comment allez-vous, {who}?
+      informal: "What's up?"
+    bye: Bye

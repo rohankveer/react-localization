@@ -1,0 +1,8 @@
+en:
+  greetings:
+    hello: Hello, {who}!
+    howdy:
+      formal: How do you do?
+      normal: How are you, {who}?
+      informal: "What's up?"
+    bye: Bye
